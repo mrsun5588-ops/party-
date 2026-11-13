@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>غرفة الحفلة</title>
+<meta name="theme-color" content="#0e0a22">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lalezar&family=Tajawal:wght@400;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <h1>غرفة الحفلة</h1>
+    <div class="meter">
+      <div class="ml"><span>حماس الحفلة</span><span><b id="rate">فاضية</b> · <span id="num">0</span></span></div>
+      <div class="mt"><i id="fill"></i></div>
+    </div>
+  </header>
+
+  <section class="stage" id="stage">
+    <canvas id="cv"></canvas>
+    <div class="hint" id="hint">اضغط تشغيل لتسمع أغنيتك وشوف الشخصية ترقص</div>
+  </section>
+
+  <section class="panel">
+    <div class="bar">
+      <button class="play" id="play" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path id="ico" d="M7 4.5v15l13-7.5z" fill="currentColor"/></svg><span id="playTxt">تشغيل</span></button>
+      <label class="tempo" for="bpm">السرعة <input id="bpm" type="range" min="70" max="160" value="104"><b id="bpmV">104</b></label>
+      <button class="ghost gold" id="demo" type="button">أغنية جاهزة</button>
+      <button class="ghost" id="clear" type="button">مسح</button>
+    </div>
+    <div class="sounds" id="sounds"></div>
+    <div class="sh"><span>الصوت المختار: <b id="selName"></b></span><span id="selHelp"></span></div>
+    <div class="steps" id="steps"></div>
+  </section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
